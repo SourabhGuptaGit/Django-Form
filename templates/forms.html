@@ -1,0 +1,316 @@
+{% load static %}
+
+<!DOCTYPE html>  
+<html lang="en">  
+    <head>  
+        <meta charset="UTF-8">  
+        <title>Build Request Form</title>
+        <!-- <style>
+            div {
+                height:1500px;
+                width:78%;
+                outline:thin solid black;
+                position:relative;
+                background:white;
+            }
+            div::after, div::before {
+                height:1500px;
+                content:' ';
+                position: absolute;
+                top: 0;
+                width: 8%;
+            }
+            div::after {
+                right: 0;
+                background-color: #182848;
+            }
+            div::before {
+                left: 0;
+                background-color: #182848;
+            }
+        </style> -->
+        <script src="{% static 'test.js' %}" type="text/javascript"></script> 
+    </head>
+    <!-- <img src="{% static 'image/forms_bg.png' %}" alt="My image" height="300px" width="700px"/>   -->
+  
+    <!-- <body style="background-image: url('MicrosoftTeams-image.png');"> -->
+    <body>
+        
+        {% if Rsubmitted %}
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <meta charset="utf-8">
+        <title>Form Submitted Successfully</title>
+        <style>
+            body {
+            background: linear-gradient(90deg, #4b6cb7, #182848);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            }
+            
+            h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: white;
+            }
+            
+            p {
+            font-size: 1.2rem;
+            color: white;
+            }
+            
+            button {
+            padding: 0.8rem 1.3rem;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            background-color: rgb(112, 111, 111);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.904);
+            transition: all 0.2s ease-in-out;
+            }
+            
+            button:hover {
+            background-color: rgb(59, 59, 59);
+            transform: translateY(-3px);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            }
+            
+            button:active {
+            transform: translateY(2px);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            }
+            
+            .container {
+            position: relative;
+            }
+            
+            .server, .client {
+            height: 1300px;
+            width: 1300px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            }
+            
+            .server {
+            left: -1600px;
+            top: -1000px;
+            }
+            
+            .client {
+            right: -1600px;
+            bottom: -1000px;
+            }
+            
+            .server, .client, .data {
+            background: rgb(63, 63, 63);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: flow 1s ease-out forwards;
+            }
+            
+            .data {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 75px;
+            left: 75px;
+            border-radius: 50%;
+            animation: flow-data 1s ease-out forwards;
+            }
+            
+            @keyframes flow {
+            100% {
+                transform: scale(1);
+            }
+            }
+            
+            @keyframes flow-data {
+            0% {
+                top: 75px;
+                left: 75px;
+            }
+            100% {
+                top: 125px;
+                left: 125px;
+            }
+            }
+        </style>
+        </head>
+        <body>
+        <div class="container">
+            <div class="server"></div>
+            <div class="data"></div>
+            <div class="client"></div>
+            <h1 style="font-family: 'Poppins', sans-serif;">Form Submitted Successfully!</h1>
+            <p style="font-family: 'Poppins', sans-serif;">To Submit Another Response click Below Button.</p>
+            <button id="back-button">Form Page</button>
+        </div>
+        
+        <script>
+            const backButton = document.getElementById("back-button");
+            backButton.addEventListener("click", function() {
+            window.history.back();
+            });
+        </script>
+        </body>
+        </html>
+
+
+
+        {% else %}
+
+        <style>
+            h1{
+            font-family: commanders;
+            background-color: rgb(92, 92, 89);
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 50px;
+        }
+        .first{
+            font-family: Castellar;
+            background-color: green;
+            color: blue;
+        }
+            #second{
+                text-align: right;
+            background-color: white;
+            font-size: 30px;
+            color: red;
+        }
+        </style>
+        <center><p id="second"><h1>Deepscreen Build Request Form</h1></p></center>
+        
+        <div id="content" class='container'>
+            <style>
+                body {
+                    background-image: url("{% static 'images/cover.jpg' %}");
+                }
+                </style>
+            <style>
+                html { overflow-y: scroll; overflow-x:hidden; }
+                div {
+                    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+
+                    border-radius: 5px;
+                    /* background-color: #dededf; */
+                    padding-left: 200px;
+                    
+                    padding-right: 200px;
+                    padding-top: 20px;
+                    font-family:monospace;
+                    
+                }
+                /* body { position: absolute; } */
+                /* 
+                select {
+                    width: 100%;
+                    padding: 16px 20px;
+                    border: none;
+                    border-radius: 4px;
+                background-color: #ffffff;
+            } */
+            
+                input[type=text], select {
+                    width: 100%;
+                    padding: 12px 15px;
+                    margin: 8px 0;
+                    /* box-shadow:0 0 20px 8px rgba(8, 8, 8, 0.06); */
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                background-color: #cdd2eb79;
+                /* border:0; */
+                box-shadow:0 0 4px rgba(0,0,0,0.8);
+                transition: .8s box-shadow;
+            }
+            
+                input[type=email], select {
+                    width: 100%;
+                    padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            
+            
+            input[type=email], select {
+                background-color: #e0e4f8;
+                border:0;
+                box-shadow:0 0 4px rgba(0,0,0,0.8);
+                transition: .8s box-shadow;
+            }
+            input[type=email], select {
+                box-shadow:0 0 4px rgba(0, 0, 0, 0.8);
+            }
+            
+            
+            
+            
+            button {
+                display: inline-block;
+                border-radius: 4px;
+                background-color: #7c0303;
+                border: none;
+                color: #cacaca;
+                text-align: center;
+                font-size: 18px;
+                padding: 15px;
+                width: 160px;
+                transition: all 0.3s;
+                cursor: pointer;
+                margin: 6px;
+                opacity: 1;
+            }
+
+            
+            
+            button:hover  {
+                background-color: #0a0909;
+                padding-right: 40px;
+                opacity: 1.8;
+                right: 2px;
+            }
+            
+            
+            
+            </style>
+        <!-- <p><h2>Build Request Form</h2></p> -->
+        <form method="POST" id="myForm" class="post-form">  
+            {% csrf_token %}  
+            {{ form.as_p }}
+            <br></br>
+            <button id="clickme" type="submit" class="save btn btn-default">Submit</button>
+            <!-- <button id="clickme" type="submit" class="save btn btn-default">Submit</button> -->
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            
+    <script type="text/javascript">
+        document.querySelector('form').onsubmit = e => {
+        e.target.submit();
+        e.target.reset();
+        return false;
+        };
+    </script>
+    </form>
+    {% endif %}
+</div>
+</body>  
+</html>
